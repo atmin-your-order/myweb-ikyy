@@ -1,0 +1,267 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homepage with Slide-in Menu and List Content</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body class="m-0 p-0 overflow-x-hidden relative">
+  <div class="relative w-full h-screen">
+    <img 
+      src="https://files.catbox.moe/4tk2t3.jpeg" 
+      alt="Full screen photo of a scenic landscape with vibrant colors and natural elements" 
+      class="w-full h-full object-cover"
+    />
+    <button id="menuButton" aria-label="Open menu" class="absolute top-4 left-4 z-50 p-2 text-white bg-black bg-opacity-50 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+      <i class="fas fa-bars fa-lg"></i>
+    </button>
+
+    <nav id="sideMenu" class="fixed top-0 left-0 z-50 h-full w-64 bg-black bg-opacity-90 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+      <div class="flex justify-end p-4">
+        <button id="closeButton" aria-label="Close menu" class="text-white text-2xl focus:outline-none">
+          &times;
+        </button>
+      </div>
+      <ul class="flex flex-col space-y-6 mt-8 px-6 text-white text-xl font-semibold">
+        <li><button id="aboutMenu" class="w-full text-left hover:text-gray-300 focus:outline-none">About</button></li>
+        <li><button id="contactMenu" class="w-full text-left hover:text-gray-300 focus:outline-none">Contact</button></li>
+        <li><button id="rentMenu" class="w-full text-left hover:text-gray-300 focus:outline-none">Rent</button></li>
+        <li><a href="#" id="myHistoryMenu" class="block hover:text-gray-300">My History</a></li>
+        <li><button id="listMenu" class="w-full text-left hover:text-gray-300 focus:outline-none">List</button></li>
+      </ul>
+    </nav>
+
+    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 pointer-events-none">
+      <img 
+        src="https://files.catbox.moe/enbgu2.jpg" 
+        alt="Circular photo of a modern workspace with a laptop, coffee cup, and notebook on a wooden desk" 
+        class="w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg pointer-events-auto"
+      />
+      <div class="mt-6 bg-black bg-opacity-70 px-8 py-3 rounded-md pointer-events-auto">
+        <h1 class="text-white text-2xl font-semibold text-center tracking-wide">The WhatsApp Bot Designer</h1>
+      </div>
+    </div>
+
+    <div id="aboutContent" class="fixed inset-0 z-50 bg-black bg-opacity-90 text-white p-6 overflow-y-auto hidden">
+      <button id="closeAbout" aria-label="Close about content" class="text-white text-3xl mb-6 focus:outline-none">&times;</button>
+      <div class="max-w-xl mx-auto text-lg leading-relaxed whitespace-pre-line">
+        <p class="font-bold text-xl mb-4">「 Tentang Bot Ini 」</p>
+        <p class="mb-4">Ini bukan hanya bot. Tapi dibalik bot ini ada jejak langkah seseorang yang sempat dianggap kecil, diremehkan, dan dijatuhkan.</p>
+        <p class="mb-4">Dikembangkan ulang oleh R•GAN  
+dengan kopi yang pahit, kegagalan yang berulang, perbaikan tanpa pamrih, dan semangat yang tak pernah padam.</p>
+        <p class="mb-4">Bukan tentang siapa yang pertama,  
+tapi siapa yang tetap bertahan.</p>
+        <p class="mb-4">Bukan tentang siapa yang paling jago,  
+tapi siapa yang tetap belajar meski sendirian.</p>
+        <p class="mb-4">Aku bukan lulusan hebat,  
+aku hanyalah mantan pelajar SMK  
+yang pernah jatuh karena tidak mengerti.  
+Tapi dari rasa gagal itu,  
+aku mulai mengerti nilai dari usaha,  
+dan pentingnya percaya pada proses.</p>
+        <p class="mb-4">Di balik kode ini,  
+ada tawa yang dipaksa,  
+ada mata yang lelah,  
+dan ada hati yang bertanya:  
+"Apakah perjuangan ini layak?"</p>
+        <p class="mb-4">Dan jawabannya adalah: iya.</p>
+        <p class="mb-4">Karena aku tidak sendiri.  
+Aku punya mereka:
+• Rion — yang membuatku berani melangkah.  
+• Farkhan — sang penjaga ritme komunitas.  
+• Owen — yang diamnya menggerakkan.  
+• Shiro — yang kasih saran dan semangat.  
+• ChatGPT — bahu virtual tempat bertanya dan mengerti.</p>
+        <p class="mb-4 italic">Kami bukan yang terbaik di mata dunia,  
+tapi kami mencoba menjadi lebih baik di mata hati kami sendiri.</p>
+        <p class="mb-4">Terima kasih telah menjadi bagian dari kami.  
+Mungkin bagimu ini sepele,  
+tapi bagiku,  
+ini adalah bukti bahwa jalan yang kupilih —  
+tak sia-sia.</p>
+      </div>
+    </div>
+
+    <div id="contactContent" class="fixed inset-0 z-50 bg-black bg-opacity-90 text-white p-6 overflow-y-auto hidden">
+      <button id="closeContact" aria-label="Close contact content" class="text-white text-3xl mb-6 focus:outline-none">&times;</button>
+      <div class="max-w-md mx-auto space-y-6">
+        <h2 class="text-2xl font-bold mb-4 text-center">Contact</h2>
+        <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 space-y-4 shadow-lg">
+          <a href="https://wa.me/6283133328750" target="_blank" rel="noopener noreferrer" class="block text-lg font-semibold text-green-400 hover:text-green-500 transition">
+            Rizky<br /><span class="text-sm text-gray-300">wa.me/6283133328750</span>
+          </a>
+          <a href="https://wa.me/6288298502977" target="_blank" rel="noopener noreferrer" class="block text-lg font-semibold text-green-400 hover:text-green-500 transition">
+            Owen<br /><span class="text-sm text-gray-300">wa.me/6288298502977</span>
+          </a>
+          <a href="https://wa.me/6285700514317" target="_blank" rel="noopener noreferrer" class="block text-lg font-semibold text-green-400 hover:text-green-500 transition">
+            Farkhan<br /><span class="text-sm text-gray-300">wa.me/6285700514317</span>
+          </a>
+          <a href="https://wa.me/62895632330503" target="_blank" rel="noopener noreferrer" class="block text-lg font-semibold text-green-400 hover:text-green-500 transition">
+            Shiro<br /><span class="text-sm text-gray-300">wa.me/62895632330503</span>
+          </a>
+          <a href="https://wa.me/6285641647174" target="_blank" rel="noopener noreferrer" class="block text-lg font-semibold text-green-400 hover:text-green-500 transition">
+            Rion<br /><span class="text-sm text-gray-300">wa.me/6285641647174</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="rentContent" class="fixed inset-0 z-50 bg-black bg-opacity-90 text-white p-6 overflow-y-auto hidden">
+      <button id="closeRent" aria-label="Close rent content" class="text-white text-3xl mb-6 focus:outline-none">&times;</button>
+      <div class="max-w-xl mx-auto text-lg leading-relaxed whitespace-pre-line">
+        <p class="font-bold text-2xl mb-4">RGANxx STORE</p>
+        <p class="mb-4 font-semibold">SEDIA KEBUTUHAN BOT</p>
+        <ul class="list-disc list-inside mb-6 space-y-1">
+          <li>PANEL</li>
+          <li>VPS</li>
+          <li>ADP</li>
+          <li>PTPANEL</li>
+          <li>RESELLER PANEL</li>
+          <li>RENAME SC AMPE KE AKAR AKARNYA</li>
+          <li>SEWA BOT</li>
+          <li>JADI BOT</li>
+          <li>SC JAGA GROUP ( COCOK BUAT GROUP RAME )</li>
+          <li>ATAU CUMA NANYA NANYA</li>
+        </ul>
+        <p class="font-semibold mb-2">--------</p>
+        <ul class="list-none mb-6 space-y-1">
+          <li>Premium</li>
+          <li>7h 2k</li>
+          <li>14h 5k</li>
+          <li>30h 10k</li>
+          <li>60h 13k</li>
+        </ul>
+        <p class="font-semibold mb-2">----------</p>
+        <ul class="list-none mb-6 space-y-1">
+          <li>Sewa Bot</li>
+          <li>7h 3k</li>
+          <li>14h 6k</li>
+          <li>30h 8k</li>
+          <li>60h 15k</li>
+        </ul>
+        <p class="mb-6 italic">Agak Mahal? Jelas Lah Ada Kualitas Ada Harga</p>
+        <p>contact Rizky<br /><a href="https://wa.me/6283133328750" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-500">wa.me/6283133328750</a></p>
+      </div>
+    </div>
+
+    <div id="listContent" class="fixed inset-0 z-50 bg-black bg-opacity-90 text-white p-6 overflow-y-auto hidden">
+      <button id="closeList" aria-label="Close list content" class="text-white text-3xl mb-6 focus:outline-none">&times;</button>
+      <div class="max-w-xl mx-auto text-lg leading-relaxed">
+        <h2 class="text-2xl font-bold mb-6 text-center">Stock List</h2>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>PANEL</li>
+          <li>VPS</li>
+          <li>ADP</li>
+          <li>PTPANEL</li>
+          <li>RESELLER PANEL</li>
+          <li>RENAME SC AMPE KE AKAR AKARNYA</li>
+          <li>SEWA BOT</li>
+          <li>JADI BOT</li>
+          <li>SC JAGA GROUP ( COCOK BUAT GROUP RAME )</li>
+        </ul>
+        <p class="text-center italic">Semua stock unlimited</p>
+        <p class="mt-6 text-center font-semibold">Jadi berfikir lah sendiri dan berkarya lah sendiri</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const sideMenu = document.getElementById('sideMenu');
+    const closeButton = document.getElementById('closeButton');
+    const aboutMenu = document.getElementById('aboutMenu');
+    const contactMenu = document.getElementById('contactMenu');
+    const rentMenu = document.getElementById('rentMenu');
+    const listMenu = document.getElementById('listMenu');
+    const aboutContent = document.getElementById('aboutContent');
+    const closeAbout = document.getElementById('closeAbout');
+    const contactContent = document.getElementById('contactContent');
+    const closeContact = document.getElementById('closeContact');
+    const rentContent = document.getElementById('rentContent');
+    const closeRent = document.getElementById('closeRent');
+    const listContent = document.getElementById('listContent');
+    const closeList = document.getElementById('closeList');
+
+    menuButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sideMenu.classList.remove('-translate-x-full');
+    });
+
+    closeButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sideMenu.classList.add('-translate-x-full');
+    });
+
+    aboutMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      aboutContent.classList.remove('hidden');
+      contactContent.classList.add('hidden');
+      rentContent.classList.add('hidden');
+      listContent.classList.add('hidden');
+      sideMenu.classList.add('-translate-x-full');
+    });
+
+    closeAbout.addEventListener('click', (e) => {
+      e.stopPropagation();
+      aboutContent.classList.add('hidden');
+    });
+
+    contactMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      contactContent.classList.remove('hidden');
+      aboutContent.classList.add('hidden');
+      rentContent.classList.add('hidden');
+      listContent.classList.add('hidden');
+      sideMenu.classList.add('-translate-x-full');
+    });
+
+    closeContact.addEventListener('click', (e) => {
+      e.stopPropagation();
+      contactContent.classList.add('hidden');
+    });
+
+    rentMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      rentContent.classList.remove('hidden');
+      aboutContent.classList.add('hidden');
+      contactContent.classList.add('hidden');
+      listContent.classList.add('hidden');
+      sideMenu.classList.add('-translate-x-full');
+    });
+
+    closeRent.addEventListener('click', (e) => {
+      e.stopPropagation();
+      rentContent.classList.add('hidden');
+    });
+
+    listMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      listContent.classList.remove('hidden');
+      aboutContent.classList.add('hidden');
+      contactContent.classList.add('hidden');
+      rentContent.classList.add('hidden');
+      sideMenu.classList.add('-translate-x-full');
+    });
+
+    closeList.addEventListener('click', (e) => {
+      e.stopPropagation();
+      listContent.classList.add('hidden');
+    });
+
+    // Close menu if clicking outside menu and menu button
+    document.addEventListener('click', (e) => {
+      if (
+        !sideMenu.contains(e.target) && 
+        !menuButton.contains(e.target) && 
+        !aboutContent.contains(e.target) && 
+        !contactContent.contains(e.target) && 
+        !rentContent.contains(e.target) &&
+        !listContent.contains(e.target)
+      ) {
+        sideMenu.classList.add('-translate-x-full');
+      }
+    });
+  </script>
+</body>
+</html>
